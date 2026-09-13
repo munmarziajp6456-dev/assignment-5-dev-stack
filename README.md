@@ -1,19 +1,52 @@
-# React + Vite
+Project Description
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+Dev Stack is a modern React application where developers can explore different technologies and build their own developer stack. Users can add technologies to their stack, remove individual technologies, or clear the entire stack.
 
-Currently, two official plugins are available:
+Live Project
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+Add your live project link here.
 
-## React Compiler
+Technologies Used
+React.js
+JavaScript ES6+
+CSS3
+Vite
+React Toastify
+JSON
+Features
+Explore different frontend, backend, database and development technologies.
+Add technologies to your personal developer stack without duplicate items.
+Remove individual technologies or clear the complete stack.
+Responsive design for mobile, tablet and desktop.
+Toast notifications for all important actions.
+Loading state while technology data is fetched from JSON.
 
-The React Compiler is enabled on this template. See [this documentation](https://react.dev/learn/react-compiler) for more information.
+##React Questions and Answers
 
-Note: This will impact Vite dev & build performances.
-You can also try [the experimental native React Compiler support in plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md#rust-react-compiler) by using `compiler: true` in the plugin options instead of using the Babel plugin.
+1. What is JSX, and why is it used in React?
 
-## Expanding the Oxlint configuration
+JSX is a way to write HTML-like code inside JavaScript. I use JSX in React because it makes my code easier to read and write.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and Oxlint's TypeScript related rules in your project.
+2. What is the difference between props and state?
+
+Props are used to send data from a parent component to a child component. State is used to store data inside a component, and I can change or update it when needed.
+
+3. What does the useState hook do, and where did you use it in this project?
+
+useState helps me store and update data in a component. In my project, I used it for selected technologies, loading state, and mobile menu state.
+
+4. What does the useEffect hook do, and why did you need it to load the JSON data?
+
+useEffect runs some code after the component is rendered. I used it to load the technology data from my local JSON file when the app starts.
+
+5. Why does every item in a .map() list need a unique key prop?
+
+The key helps React identify each item in the list. This helps React update the correct item easily when something changes.
+
+6. What is conditional rendering? Show one place you used it.
+
+Conditional rendering means showing something based on a condition. In my project, if there are no technologies in the selected stack, I show the message "Your stack is empty".
+
+7. How do you pass data from a parent component to a child component, and how does a child send something back to the parent?
+
+I pass data from a parent component to a child component using props. If I want the child to send something back, I pass a function from the parent as a prop. Then the child can call that function when needed.
