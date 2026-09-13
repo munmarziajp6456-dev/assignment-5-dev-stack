@@ -1,20 +1,43 @@
-import { useState } from 'react'
-import heroImg from './assets/hero.png'
-import reactLogo from './assets/react.svg'
-import viteLogo from './assets/vite.svg'
-import './App.css'
-import Navbar from './components/Navbar'
-import HeroSection from './components/HeroSection'
+import { useEffect, useState } from "react";
+import "./App.css";
+
+import Navbar from "./components/Navbar";
+import HeroSection from "./components/HeroSection";
+import TechnologyCard from "./components/TechnologyCard";
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [technologies, setTechnologies] = useState([]);
+  const [stack, setStack] = useState([]);
+
+  useEffect(() => {
+    fetch("/technologies.json")
+      .then((res) => res.json())
+      .then((data) => setTechnologies(data));
+  }, []);
+
+  const handleAddToStack = (technology) => {
+    const alreadyAdded = stack.find(
+      (item) => item.id === technology.id
+    );
+
+    if (alreadyAdded) {
+      return;
+    }
+
+    setStack([...stack, technology]);
+  };
 
   return (
     <>
       <Navbar />
-      <HeroSection/>
+      <HeroSection />
+ <TechnologyCard
+        technologies={technologies}
+        stack={stack}
+        handleAddToStack={handleAddToStack}
+      />
     </>
-  )
+  );
 }
 
-export default App
+export default App;

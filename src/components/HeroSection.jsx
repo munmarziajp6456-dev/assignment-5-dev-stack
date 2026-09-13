@@ -5,24 +5,20 @@ function HeroSection() {
       <div className="hero-container">
         
         <div className="hero-content">
-          <p className="hero-label">
-            🚀 YOUR DEVELOPMENT JOURNEY STARTS HERE
-          </p>
-
-          <h1>
+                   <h1>
             Build Your Ideal
             <span> Development Stack</span>
           </h1>
 
           <p className="hero-description">
-            Discover the technologies that power modern applications.
-            Explore, learn, and build your perfect developer stack.
+            Explore frontend, backend, database, and tooling options,
+compare them side by side, and put together the stack that fits your
+next project.
           </p>
 
           <div className="hero-buttons">
             <button className="primary-btn">
-              Explore Technologies →
-            </button>
+              Explore Technologies             </button>
 
             <button className="secondary-btn">
               Learn More
